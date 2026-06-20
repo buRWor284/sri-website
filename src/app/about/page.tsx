@@ -14,6 +14,11 @@ const AWARDS = [
     title: "i2i Business Accelerator Finalist",
     desc: "Qualified for the final round of the Invest to Innovate Business Accelerator Program.",
   },
+  {
+    icon: '⬡',
+    title: "BlackBox.vc Accelerator — Silicon Valley",
+    desc: "Accepted into BlackBox.vc's Silicon Valley-based accelerator program — a global cohort of high-potential technology startups.",
+  },
 ]
 
 export default function About() {
@@ -41,6 +46,14 @@ export default function About() {
             </p>
           </div>
 
+          {/* Legacy Archive Note */}
+          <div style={{ borderLeft: `4px solid rgba(0,188,236,0.4)`, background: '#f9f9f9', padding: '22px 22px 22px 24px', margin: '0 0 40px', borderRadius: '0 2px 2px 0' }}>
+            <Lbl style={{ marginBottom: '10px', display: 'block' }}>A Note on This Archive</Lbl>
+            <p style={{ fontFamily: BF, fontSize: '14px', color: C.gray, lineHeight: '1.8', margin: 0 }}>
+              Silk Route Interactive operated from 2012 to 2014 — self-funded, profitable, and purpose-built. We didn&apos;t wind down from failure; we retired something that worked. This site is preserved as a living archive: a record of the products we shipped, the problems we solved, and the team that made it happen. The good old days, kept online.
+            </p>
+          </div>
+
           <h2 style={{ fontFamily: DF, fontWeight: 600, fontSize: '1rem', color: C.dark, letterSpacing: '0.15em', textTransform: 'uppercase', margin: '0 0 18px' }}>
             Awards & Recognition
           </h2>
@@ -61,7 +74,7 @@ export default function About() {
           ))}
 
           <div style={{ marginTop: '40px' }}>
-            <Btn href="/contact" variant="primary">Work With Us</Btn>
+            <Btn href="/products" variant="primary">Explore Our Products</Btn>
           </div>
         </div>
       </section>

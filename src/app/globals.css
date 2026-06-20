@@ -41,9 +41,13 @@ a { text-decoration: none; color: inherit; }
 .btn-md { padding: 9px 24px; font-size: 11px; }
 .btn-lg { padding: 13px 32px; font-size: 12px; }
 
-/* ── Card hover ── */
+/* ── Card hover (homepage grid) ── */
 .product-card { transition: all 200ms ease; }
 .product-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.10); transform: translateY(-3px); }
+
+/* ── Card hover (products page full-width) ── */
+.product-card-lg { transition: all 200ms ease; }
+.product-card-lg:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.14); transform: translateY(-2px); }
 
 /* ── News row hover ── */
 .news-row { transition: background 150ms ease; border-radius: 2px; }

@@ -9,13 +9,13 @@ const PRODUCTS = [
     href: '/electomap',
     name: 'ElectoMap',
     tag: 'Broadcast · Elections',
-    desc: "Interactive elections analysis & visualization on 55″ multi-touch displays. Used by ARY News during Pakistan's General Elections 2013.",
+    desc: "Interactive elections analysis & visualization on 55″ Multi-Touch HD displays. Used by ARY News during Pakistan's General Elections 2013.",
   },
   {
     href: '/jaag',
     name: 'Jaag Pakistan',
     tag: 'Civic Tech · Anti-Rigging',
-    desc: "Pakistan's first crowd-sourced anti-rigging platform. Received 25,000+ anonymous reports via SMS, Twitter, and email.",
+    desc: "Pakistan's first crowd-sourced anti-rigging platform. 20,000+ reports on election day alone (May 11, 2013) — 25,000+ total via SMS, Twitter, and email.",
   },
   {
     href: '/myvote',
@@ -26,25 +26,29 @@ const PRODUCTS = [
 ]
 
 const NEWS = [
+  { date: '2013–2014', text: "SRI accepted into BlackBox.vc's Silicon Valley accelerator program." },
   { date: '30 Jul 2013', text: "SRI qualifies for the final round of i2i Business Accelerator Program!" },
   { date: '27 Jun 2013', text: "SRI receives 'The Best Start-Up' Award from P@SHA LaunchPad 2013 Islamabad!" },
   { date: '09 May 2013', text: "ElectoMap goes LIVE on ARY News for General Elections 2013 transmission." },
-  { date: '12 May 2013', text: "Anti-Rigging Solution goes live at PTI Election Cell — receives 25,000+ rigging reports." },
+  { date: '12 May 2013', text: "Anti-Rigging Solution goes live at PTI Election Cell — 20,000+ reports on election day, 25,000+ total." },
 ]
 
 export default function Home() {
   return (
     <div>
       <PageHero
-        label="Pakistan's Premier Spatial Intelligence Firm"
+        label="Award-Winning Spatial Intelligence Startup"
         title="GIS-Enabled Interactive Mapping Solutions"
         sub="We amplify the value of business analytics by bringing in the locational context — converting Big Data into deep geographic insights through advanced GIS, Business Intelligence, and Data Visualization."
         tall
       >
         <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', marginTop: '36px', flexWrap: 'wrap' }}>
           <Btn href="/products" variant="primary" size="lg">Explore Our Products</Btn>
-          <Btn href="/contact" variant="ghost" size="lg">Get In Touch</Btn>
+          <Btn href="/about" variant="ghost" size="lg">Our Story</Btn>
         </div>
+        <p style={{ fontFamily: 'var(--font-display, sans-serif)', fontSize: '10px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginTop: '28px', marginBottom: 0 }}>
+          ◻ Company Archive · Silk Route Interactive 2012–2014
+        </p>
       </PageHero>
 
       {/* Products Preview */}

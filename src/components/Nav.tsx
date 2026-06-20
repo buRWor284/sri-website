@@ -77,7 +77,7 @@ export default function Nav() {
       }}
     >
       <Link href="/">
-        <Image src="/sri-logo.png" alt="Silk Route Interactive" height={24} width={120} style={{ height: '24px', width: 'auto', display: 'block' }} priority />
+        <Image src="/sri-logo.png" alt="Silk Route Interactive" height={24} width={120} style={{ height: '24px', width: 'auto', display: 'block', filter: 'brightness(0) invert(1)' }} priority />
       </Link>
 
       {!mobile ? (

@@ -4,7 +4,7 @@ import Lbl from '@/components/Lbl'
 
 const BENEFITS = [
   { icon: '⊕', title: 'Real-Time Data Integration', desc: 'Live election results from multiple sources with instant visualization during broadcast transmission.' },
-  { icon: '◈', title: 'Multi-Touch Interaction', desc: 'Anchorpersons zoom, toggle, and swap constituencies on a 55″ display with complete intuitive control.' },
+  { icon: '◈', title: 'Multi-Touch Interaction', desc: 'Anchorpersons zoom, toggle, and swap constituencies on a 55″ Multi-Touch HD screen with complete intuitive control.' },
   { icon: '▦', title: 'Rich Data Visualization', desc: 'Pie charts, bar graphs, heat maps, voter turnout, party performance — all in one unified interface.' },
   { icon: '◉', title: 'Historical Analysis', desc: 'Compare 2002, 2008 and live 2013 results across any constituency or region of Pakistan.' },
 ]

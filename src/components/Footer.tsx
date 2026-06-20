@@ -41,9 +41,9 @@ export default function Footer() {
         }}
       >
         <div>
-          <Image src="/sri-logo.png" alt="SRI" height={22} width={110} style={{ height: '22px', width: 'auto', marginBottom: '14px', display: 'block' }} />
+          <Image src="/sri-logo.png" alt="SRI" height={22} width={110} style={{ height: '22px', width: 'auto', marginBottom: '14px', display: 'block', filter: 'brightness(0) invert(1)' }} />
           <p style={{ fontFamily: BF, fontSize: '13px', color: 'rgba(255,255,255,0.4)', lineHeight: '1.65', margin: 0, maxWidth: '220px' }}>
-            Pakistan&apos;s premier Spatial Intelligence firm. GIS · BI · Interactive Data Visualization.
+            An award-winning Spatial Intelligence startup (2012–2014). This site is preserved as a company archive.
           </p>
         </div>
 
