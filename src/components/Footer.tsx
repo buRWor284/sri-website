@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { C, DF, BF } from '@/lib/tokens'
@@ -29,6 +30,17 @@ function FLink({ href, children }: { href: string; children: React.ReactNode }) 
 }
 
 export default function Footer() {
+  const [emailHref, setEmailHref] = useState<string | undefined>(undefined)
+  const [emailLabel, setEmailLabel] = useState<string>('——')
+
+  useEffect(() => {
+    const u = 'sia'
+    const d = 'syedirfanajmal' + '.' + 'com'
+    const email = u + '@' + d
+    setEmailHref('mailto:' + email)
+    setEmailLabel(email)
+  }, [])
+
   return (
     <footer style={{ background: C.nav, padding: '56px 40px 28px', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
       <div
@@ -69,25 +81,35 @@ export default function Footer() {
           <p style={{ fontFamily: BF, fontSize: '13px', color: 'rgba(255,255,255,0.45)', lineHeight: '1.7', margin: '0 0 10px' }}>
             CIE, NUST, H-12<br />Islamabad 44000, Pakistan
           </p>
-          <a href="mailto:sia@syedirfanajmal.com" style={{ fontFamily: BF, fontSize: '13px', color: C.cyan, display: 'block', marginBottom: '16px' }}>
-            sia@syedirfanajmal.com
+          <a href={emailHref} style={{ fontFamily: BF, fontSize: '13px', color: C.cyan, display: 'block', marginBottom: '16px' }}>
+            {emailLabel}
           </a>
           <div style={{ display: 'flex', gap: '16px' }}>
-            {['LinkedIn', 'Twitter', 'Facebook'].map(s => (
-              <span
-                key={s}
-                style={{ fontFamily: DF, fontSize: '9px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', cursor: 'pointer', transition: 'color 150ms' }}
+            {[
+              { label: 'Facebook', href: 'https://www.facebook.com/SilkRouteInteractive/' },
+              { label: 'YouTube', href: 'https://www.youtube.com/@silkrouteinteractive' },
+              { label: 'Vimeo', href: 'https://vimeo.com/silkrouteinteractive' },
+            ].map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ fontFamily: DF, fontSize: '9px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', textDecoration: 'none', transition: 'color 150ms' }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = C.cyan }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.3)' }}
               >
-                {s}
-              </span>
+                {label}
+              </a>
             ))}
           </div>
         </div>
       </div>
 
       <div style={{ maxWidth: '1200px', margin: '28px auto 0', borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '18px' }}>
+        <p style={{ fontFamily: BF, fontSize: '12px', color: 'rgba(255,255,255,0.3)', textAlign: 'center', lineHeight: '1.7', margin: '0 0 8px' }}>
+          Silk Route Interactive was fully self-funded by its founders and operated profitably from 2012 to 2014.
+        </p>
         <p style={{ fontFamily: DF, fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.2)', textAlign: 'center', margin: 0 }}>
           © 2013 SILK ROUTE INTERACTIVE — CIE, NUST, ISLAMABAD, PAKISTAN
         </p>
