@@ -90,15 +90,13 @@ export default function Nav() {
                 onMouseEnter={() => setDd(true)}
                 onMouseLeave={() => setDd(false)}
               >
-                <span style={linkStyle(href)}>
+                <Link href={href} style={linkStyle(href)}>
                   {label} <span style={{ fontSize: '7px', opacity: 0.7 }}>▼</span>
-                </span>
+                </Link>
                 {dd && (
+                  <div style={{ position: 'absolute', top: '100%', left: '-16px', paddingTop: '8px' }}>
                   <div
                     style={{
-                      position: 'absolute',
-                      top: 'calc(100% + 8px)',
-                      left: '-16px',
                       background: C.nav,
                       border: '1px solid rgba(255,255,255,0.1)',
                       minWidth: '160px',
@@ -127,6 +125,7 @@ export default function Nav() {
                         {p.label}
                       </Link>
                     ))}
+                  </div>
                   </div>
                 )}
               </div>
