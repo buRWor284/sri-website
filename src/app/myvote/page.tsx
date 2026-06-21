@@ -1,6 +1,7 @@
 import { C, DF, BF } from '@/lib/tokens'
 import PageHero from '@/components/PageHero'
 import Lbl from '@/components/Lbl'
+import Image from 'next/image'
 
 const FEATURES = [
   { text: 'Boundaries of your National Assembly Constituency', soon: false },
@@ -30,6 +31,18 @@ export default function MyVote() {
         title="MyVote.pk"
         sub="An electoral map-based info portal where voters can find important information about their National and Provincial Assembly constituency."
       />
+
+      {/* Banner image */}
+      <div style={{ background: C.nav, borderBottom: `1px solid ${C.border}` }}>
+        <Image
+          src="/images/my_vote_sri.jpg"
+          alt="MyVote.pk — Find Your Constituency, Pakistan Electoral Map"
+          width={1200}
+          height={444}
+          style={{ width: '100%', maxHeight: '320px', objectFit: 'cover', display: 'block', opacity: 0.9 }}
+          priority
+        />
+      </div>
 
       <section style={{ background: C.white, padding: '80px 40px' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '60px' }}>

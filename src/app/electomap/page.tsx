@@ -1,6 +1,7 @@
 import { C, DF, BF, gridPattern } from '@/lib/tokens'
 import PageHero from '@/components/PageHero'
 import Lbl from '@/components/Lbl'
+import Image from 'next/image'
 
 const BENEFITS = [
   { icon: '⊕', title: 'Real-Time Data Integration', desc: 'Live election results from multiple sources with instant visualization during broadcast transmission.' },
@@ -48,20 +49,39 @@ export default function ElectoMap() {
             ))}
           </div>
 
-          {/* Video placeholder */}
+          {/* Product images */}
+          <Lbl style={{ marginBottom: '14px', display: 'block' }}>Screenshots</Lbl>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px', marginBottom: '60px' }}>
+            <div style={{ borderRadius: '2px', overflow: 'hidden', border: `1px solid ${C.border}` }}>
+              <Image src="/images/electomap.jpg" alt="ElectoMap launch — Silk Route Interactive & ARY News" width={800} height={400} style={{ width: '100%', height: 'auto', display: 'block' }} />
+            </div>
+            <div style={{ borderRadius: '2px', overflow: 'hidden', border: `1px solid ${C.border}` }}>
+              <Image src="/images/electomap_features_snapshots.png" alt="ElectoMap feature snapshots" width={800} height={400} style={{ width: '100%', height: 'auto', display: 'block' }} />
+            </div>
+            <div style={{ borderRadius: '2px', overflow: 'hidden', border: `1px solid ${C.border}` }}>
+              <Image src="/images/electomap_6.png" alt="ElectoMap constituency view" width={800} height={400} style={{ width: '100%', height: 'auto', display: 'block' }} />
+            </div>
+            <div style={{ borderRadius: '2px', overflow: 'hidden', border: `1px solid ${C.border}` }}>
+              <Image src="/images/electomap_brochure.jpg" alt="ElectoMap brochure" width={800} height={400} style={{ width: '100%', height: 'auto', display: 'block' }} />
+            </div>
+          </div>
+
+          {/* Vimeo embed */}
           <Lbl style={{ marginBottom: '14px', display: 'block' }}>Media</Lbl>
           <h3 style={{ fontFamily: DF, fontWeight: 400, fontSize: '1.1rem', color: C.dark, margin: '0 0 18px' }}>
             ElectoMap on ARY News — General Elections 2013
           </h3>
-          <div style={{ background: C.hero, ...gridPattern, borderRadius: '2px', aspectRatio: '16/9', display: 'flex', alignItems: 'center', justifyContent: 'center', border: `1px solid ${C.border}`, maxHeight: '400px' }}>
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: C.cyan, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 14px' }}>
-                <span style={{ color: '#fff', fontSize: '22px', marginLeft: '4px' }}>▶</span>
-              </div>
-              <p style={{ fontFamily: DF, fontSize: '10px', letterSpacing: '0.15em', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', margin: 0 }}>
-                Vimeo — ARY News 2013 Transmission
-              </p>
-            </div>
+          <p style={{ fontFamily: BF, fontSize: '14px', color: C.gray, margin: '0 0 20px', lineHeight: 1.6 }}>
+            Waseem Badami demonstrating live election results on ElectoMap during ARY News&apos; 2013 transmission.
+          </p>
+          <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '2px', border: `1px solid ${C.border}` }}>
+            <iframe
+              src="https://player.vimeo.com/video/66555102#t=75"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              title="ElectoMap on ARY News — General Elections 2013"
+            />
           </div>
         </div>
       </section>

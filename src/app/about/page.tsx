@@ -2,6 +2,40 @@ import { C, DF, BF } from '@/lib/tokens'
 import PageHero from '@/components/PageHero'
 import Btn from '@/components/Btn'
 import Lbl from '@/components/Lbl'
+import Image from 'next/image'
+
+const FOUNDERS = [
+  {
+    name: 'Yasir Hussain Sheikh',
+    title: 'Co-Founder & CEO',
+    initials: 'YS',
+    photo: '/images/team/yasir_hussain.jpg',
+  },
+  {
+    name: 'Syed Irfan Ajmal',
+    title: 'Chief Marketing Technologist',
+    initials: 'IA',
+    photo: '/images/team/syed_irfan_ajmal.jpg',
+  },
+  {
+    name: 'Sajid Shah',
+    title: 'Chief Operations Officer',
+    initials: 'SS',
+    photo: '/images/team/sajid_shah.jpg',
+  },
+  {
+    name: 'Mian Imaduddin',
+    title: 'Chief Technology Officer',
+    initials: 'MI',
+    photo: '/images/team/imad_mian.jpg',
+  },
+  {
+    name: 'Shoaib Khalid',
+    title: 'Chief Spatial Analyst',
+    initials: 'SK',
+    photo: '/images/team/shoaib_khalid.jpg',
+  },
+]
 
 const AWARDS = [
   {
@@ -75,6 +109,31 @@ export default function About() {
 
           <div style={{ marginTop: '40px' }}>
             <Btn href="/products" variant="primary">Explore Our Products</Btn>
+          </div>
+        </div>
+      </section>
+
+      {/* Founders */}
+      <section style={{ background: C.subtle, padding: '80px 40px', borderTop: `1px solid ${C.border}` }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <Lbl style={{ marginBottom: '12px', display: 'block', textAlign: 'center' }}>The Team</Lbl>
+          <h2 style={{ fontFamily: DF, fontWeight: 300, fontSize: '2rem', color: C.dark, textAlign: 'center', margin: '0 0 48px' }}>
+            Founders
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '28px' }}>
+            {FOUNDERS.map(f => (
+              <div key={f.name} style={{ textAlign: 'center' }}>
+                <div style={{ width: '110px', height: '110px', borderRadius: '50%', margin: '0 auto 16px', overflow: 'hidden', border: `2px solid ${C.border}`, background: C.nav, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  {f.photo ? (
+                    <Image src={f.photo} alt={f.name} width={110} height={110} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+                  ) : (
+                    <span style={{ fontFamily: DF, fontWeight: 600, fontSize: '28px', color: C.cyan, letterSpacing: '0.05em' }}>{f.initials}</span>
+                  )}
+                </div>
+                <p style={{ fontFamily: DF, fontWeight: 600, fontSize: '15px', color: C.dark, margin: '0 0 6px', lineHeight: 1.3 }}>{f.name}</p>
+                <p style={{ fontFamily: BF, fontSize: '12px', color: C.gray, margin: 0, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{f.title}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
