@@ -1,8 +1,26 @@
+import type { Metadata } from 'next'
 import { C, DF, BF } from '@/lib/tokens'
 import PageHero from '@/components/PageHero'
 import Btn from '@/components/Btn'
 import Lbl from '@/components/Lbl'
 import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'About',
+  description:
+    'Silk Route Interactive was founded in 2013 at NUST, Islamabad — a P@SHA award-winning spatial intelligence startup accepted into the BlackBox.vc Silicon Valley accelerator.',
+  openGraph: {
+    title: 'About Silk Route Interactive',
+    description:
+      'Founded in 2013 at NUST, Islamabad. P@SHA Best Start-Up Award winner. Accepted into BlackBox.vc Silicon Valley accelerator. Pioneers in GIS and interactive data visualization in Pakistan.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About | Silk Route Interactive',
+    description:
+      'Founded in 2013 at NUST, Islamabad. P@SHA Best Start-Up Award winner. Accepted into BlackBox.vc Silicon Valley accelerator.',
+  },
+}
 
 type Founder = { name: string; title: string; initials: string; photo: string; credential?: string }
 

@@ -1,6 +1,26 @@
+import type { Metadata } from 'next'
 import { C, DF, BF } from '@/lib/tokens'
 import PageHero from '@/components/PageHero'
 import Lbl from '@/components/Lbl'
+
+export const metadata: Metadata = {
+  title: 'News',
+  description:
+    'Coverage and milestones for Silk Route Interactive — P@SHA Best Start-Up Award 2013, LaunchPad Islamabad, BlackBox.vc Silicon Valley accelerator acceptance.',
+  openGraph: {
+    title: 'News | Silk Route Interactive',
+    description:
+      'Coverage and milestones — P@SHA Best Start-Up Award 2013, LaunchPad Islamabad, BlackBox.vc Silicon Valley accelerator acceptance.',
+    images: [{ url: '/images/pasha_award_tweet.jpg', width: 374, height: 453, alt: 'P@SHA Best Start-Up Award — Silk Route Interactive' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'News | Silk Route Interactive',
+    description:
+      'P@SHA Best Start-Up Award 2013, BlackBox.vc Silicon Valley accelerator, and more milestones.',
+    images: ['/images/pasha_award_tweet.jpg'],
+  },
+}
 
 const MORE_NEWS = [
   { date: '2013–2014', tag: 'Accelerator', title: 'SRI accepted into BlackBox.vc Silicon Valley accelerator program' },

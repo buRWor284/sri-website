@@ -1,7 +1,27 @@
+import type { Metadata } from 'next'
 import { C, DF, BF } from '@/lib/tokens'
 import PageHero from '@/components/PageHero'
 import Lbl from '@/components/Lbl'
 import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'MyVote.pk',
+  description:
+    'Interactive constituency map for Pakistani voters — find your National and Provincial Assembly boundaries, registered voter density, and the 2008 election turnout for your area.',
+  openGraph: {
+    title: 'MyVote.pk',
+    description:
+      'Interactive constituency map for Pakistani voters — find your National and Provincial Assembly boundaries, registered voter density, and 2008 election turnout.',
+    images: [{ url: '/images/my_vote_sri.jpg', width: 850, height: 314, alt: 'MyVote.pk — Silk Route Interactive' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'MyVote.pk | Silk Route Interactive',
+    description:
+      'Interactive constituency map for Pakistani voters. Find your boundaries, voter density, and election turnout.',
+    images: ['/images/my_vote_sri.jpg'],
+  },
+}
 
 const FEATURES = [
   { text: 'Boundaries of your National Assembly Constituency', soon: false },

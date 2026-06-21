@@ -1,7 +1,27 @@
+import type { Metadata } from 'next'
 import { C, DF, BF, gridPattern } from '@/lib/tokens'
 import PageHero from '@/components/PageHero'
 import Lbl from '@/components/Lbl'
 import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'ElectoMap Pakistan',
+  description:
+    "Interactive GIS election results platform used live on ARY News during Pakistan's 2013 General Elections. The only system to digitize all National and Provincial Assembly constituency maps.",
+  openGraph: {
+    title: 'ElectoMap Pakistan',
+    description:
+      "Interactive GIS election results platform used live on ARY News during Pakistan's 2013 General Elections. The only system to digitize all National and Provincial Assembly constituency maps.",
+    images: [{ url: '/images/electomap.jpg', width: 851, height: 315, alt: 'ElectoMap — Silk Route Interactive & ARY News' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ElectoMap Pakistan | Silk Route Interactive',
+    description:
+      "Interactive GIS election results platform used live on ARY News during Pakistan's 2013 General Elections.",
+    images: ['/images/electomap.jpg'],
+  },
+}
 
 const BENEFITS = [
   { icon: '⊕', title: 'Real-Time Data Integration', desc: 'Live election results from multiple sources with instant visualization during broadcast transmission.' },

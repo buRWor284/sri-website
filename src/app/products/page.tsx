@@ -1,8 +1,26 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { C, DF, BF, gridPattern } from '@/lib/tokens'
 import PageHero from '@/components/PageHero'
 import Btn from '@/components/Btn'
 import Lbl from '@/components/Lbl'
+
+export const metadata: Metadata = {
+  title: 'Products',
+  description:
+    "ElectoMap, Jaag Pakistan, and MyVote.pk — three spatial intelligence products built by Silk Route Interactive to power Pakistan's 2013 General Elections.",
+  openGraph: {
+    title: 'Products | Silk Route Interactive',
+    description:
+      "ElectoMap, Jaag Pakistan, and MyVote.pk — GIS and spatial intelligence products built for Pakistan's 2013 General Elections.",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Products | Silk Route Interactive',
+    description:
+      "ElectoMap, Jaag Pakistan, and MyVote.pk — GIS products built for Pakistan's 2013 General Elections.",
+  },
+}
 
 const PRODUCTS = [
   {

@@ -1,6 +1,24 @@
+import type { Metadata } from 'next'
 import { C, DF, BF } from '@/lib/tokens'
 import PageHero from '@/components/PageHero'
 import Lbl from '@/components/Lbl'
+
+export const metadata: Metadata = {
+  title: 'Jaag Pakistan',
+  description:
+    'Election rigging reporting platform for Pakistan\'s 2013 General Elections. Received 20,000+ reports on election day alone across SMS, email, Twitter, and web.',
+  openGraph: {
+    title: 'Jaag Pakistan',
+    description:
+      'Election rigging reporting platform for Pakistan\'s 2013 General Elections. Received 20,000+ reports on election day alone across SMS, email, Twitter, and web.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jaag Pakistan | Silk Route Interactive',
+    description:
+      'Election rigging reporting platform for Pakistan\'s 2013 General Elections. 20,000+ reports on election day alone.',
+  },
+}
 
 const STATS = [
   ['20,000+', 'Reports on election day alone (May 11, 2013)'],
