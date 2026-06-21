@@ -4,7 +4,9 @@ import Btn from '@/components/Btn'
 import Lbl from '@/components/Lbl'
 import Image from 'next/image'
 
-const FOUNDERS = [
+type Founder = { name: string; title: string; initials: string; photo: string; credential?: string }
+
+const FOUNDERS: Founder[] = [
   {
     name: 'Yasir Hussain Sheikh',
     title: 'Co-Founder & CEO',
@@ -32,6 +34,7 @@ const FOUNDERS = [
   {
     name: 'Shoaib Khalid',
     title: 'Chief Spatial Analyst',
+    credential: 'Ph.D. GIS & Cartography · Nanjing University',
     initials: 'SK',
     photo: '/images/team/shoaib_khalid.jpg',
   },
@@ -131,7 +134,10 @@ export default function About() {
                   )}
                 </div>
                 <p style={{ fontFamily: DF, fontWeight: 600, fontSize: '15px', color: C.dark, margin: '0 0 6px', lineHeight: 1.3 }}>{f.name}</p>
-                <p style={{ fontFamily: BF, fontSize: '12px', color: C.gray, margin: 0, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{f.title}</p>
+                <p style={{ fontFamily: BF, fontSize: '12px', color: C.gray, margin: '0 0 4px', letterSpacing: '0.05em', textTransform: 'uppercase' }}>{f.title}</p>
+                {f.credential && (
+                  <p style={{ fontFamily: BF, fontSize: '11px', color: C.cyan, margin: 0, letterSpacing: '0.02em' }}>{f.credential}</p>
+                )}
               </div>
             ))}
           </div>

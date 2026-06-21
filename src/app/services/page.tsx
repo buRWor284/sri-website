@@ -5,14 +5,16 @@ import { C, DF, BF } from '@/lib/tokens'
 import PageHero from '@/components/PageHero'
 import Lbl from '@/components/Lbl'
 
-const SERVICES = [
+type Service = { name: string; items: string[]; caseStudy?: string }
+
+const SERVICES: Service[] = [
   { name: 'Customer Analytics', items: ['Customer Segmentation', 'Lifetime Value Optimization & Churn Prediction', 'Cross-sell / Up-sell Analysis', 'Basket Analysis'] },
   { name: 'Marketing Optimization', items: ['Channel & Placement Optimization', 'Sequencing & Offer Optimization', 'Market Mix Modeling', 'Campaign Attribution'] },
   { name: 'Product Analytics', items: ['Inventory Optimization', 'Product Demand Forecasting', 'Cannibalization Analysis', 'SKU Performance Mapping'] },
   { name: 'Market & Site Location', items: ['Site Location Optimization', 'Competitor Analytics', 'Trade Area Analysis', 'Catchment Mapping'] },
   { name: 'Territory Management', items: ['Territory & Route Optimization', 'Supply Chain Optimization', 'Distribution Network Analysis', 'Last-Mile Planning'] },
   { name: 'Urban Development', items: ['Land Development Prediction', 'Environmental Suitability Analysis', 'Parcel & Address Data Management', 'Urban Growth Modeling'] },
-  { name: 'Public Safety', items: ['Incident Analysis & Predictive Intelligence', 'Crime Mapping & Hot-Spot Analysis', 'Trend Forecasting & Resource Allocation', 'Mobile Asset Tracking'] },
+  { name: 'Public Safety', items: ['Incident Analysis & Predictive Intelligence', 'Crime Mapping & Hot-Spot Analysis', 'Trend Forecasting & Resource Allocation', 'Mobile Asset Tracking'], caseStudy: 'Deployed with Faisalabad Police — GIS hotspot mapping cut street crimes by 41.74% in 12 months.' },
   { name: 'Traffic & Transportation', items: ['Traffic Data Analysis & Forecasting', 'Transportation Planning & Asset Management', 'Roadway Data Integration', 'Commute Pattern Analysis'] },
 ]
 
@@ -89,13 +91,21 @@ export default function Services() {
                   </span>
                 </div>
                 {open === s.name && (
-                  <ul style={{ margin: '0 0 12px', padding: '0 0 0 16px' }}>
-                    {s.items.map((it, j) => (
-                      <li key={j} style={{ fontFamily: BF, fontSize: '13px', color: C.gray, padding: '4px 0', lineHeight: 1.5 }}>
-                        {it}
-                      </li>
-                    ))}
-                  </ul>
+                  <div style={{ marginBottom: '12px' }}>
+                    <ul style={{ margin: '0 0 8px', padding: '0 0 0 16px' }}>
+                      {s.items.map((it, j) => (
+                        <li key={j} style={{ fontFamily: BF, fontSize: '13px', color: C.gray, padding: '4px 0', lineHeight: 1.5 }}>
+                          {it}
+                        </li>
+                      ))}
+                    </ul>
+                    {s.caseStudy && (
+                      <div style={{ background: C.cyanL, border: `1px solid rgba(0,188,236,0.25)`, borderRadius: '2px', padding: '8px 12px', marginTop: '4px' }}>
+                        <span style={{ fontFamily: DF, fontSize: '9px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: C.cyan }}>Case Study — </span>
+                        <span style={{ fontFamily: BF, fontSize: '12px', color: C.gray }}>{s.caseStudy}</span>
+                      </div>
+                    )}
+                  </div>
                 )}
               </div>
             ))}

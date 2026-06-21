@@ -29,6 +29,14 @@ const PRODUCTS = [
     desc: 'Electoral map-based info portal for voters to find constituency boundaries, voter density, turnout data, and polling station addresses for NA and PA constituencies.',
     stats: [['NA+PA', 'Both assemblies'], ['4', 'Provinces covered'], ['Free', 'Public service']],
   },
+  {
+    href: '/crime-mapper',
+    tag: 'Public Safety · GIS Analytics',
+    name: 'The Crime Mapper',
+    tagline: 'Map. Predict. Prevent.',
+    desc: 'GIS-based crime hotspot mapping and predictive intelligence platform for law enforcement. Deployed with Faisalabad Police — drove a 41.74% reduction in street crimes in 12 months. Winner, P@SHA Best Start-Up Award 2013.',
+    stats: [['41.74%', 'Street crime reduction'], ['62.15%', 'Snatching decrease'], ['1,301→758', 'Incidents in 12 months']],
+  },
 ]
 
 export default function Products() {
