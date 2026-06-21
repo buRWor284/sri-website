@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import { ArchiveBannerTop } from '@/components/ArchiveBanner'
 
 export const metadata: Metadata = {
   title: 'Silk Route Interactive — Company Archive',
@@ -14,10 +13,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>
-        <ArchiveBannerTop />
         <Nav />
-        <main className="page-enter">{children}</main>
+        <main style={{ paddingTop: '58px' }}>{children}</main>
         <Footer />
       </body>
     </html>
