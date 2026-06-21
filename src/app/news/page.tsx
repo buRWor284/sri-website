@@ -3,9 +3,10 @@ import PageHero from '@/components/PageHero'
 import Lbl from '@/components/Lbl'
 
 const MORE_NEWS = [
+  { date: '2013–2014', tag: 'Accelerator', title: 'SRI accepted into BlackBox.vc Silicon Valley accelerator program' },
   { date: '30 Jul 2013', tag: 'Business', title: 'SRI qualifies for the final round of i2i Business Accelerator Program' },
   { date: '09 May 2013', tag: 'Product Launch', title: 'ElectoMap Pakistan goes LIVE on ARY News during General Elections 2013 transmission' },
-  { date: '12 May 2013', tag: 'Civic Tech', title: 'Anti-Rigging Solution goes live at PTI Election Cell — receives over 25,000 anonymous reports' },
+  { date: '12 May 2013', tag: 'Civic Tech', title: 'Anti-Rigging Solution goes live at PTI Election Cell — 20,000+ reports on election day alone, 25,000+ total' },
 ]
 
 export default function News() {

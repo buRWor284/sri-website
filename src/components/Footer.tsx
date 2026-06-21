@@ -69,12 +69,9 @@ export default function Footer() {
           <p style={{ fontFamily: BF, fontSize: '13px', color: 'rgba(255,255,255,0.45)', lineHeight: '1.7', margin: '0 0 10px' }}>
             CIE, NUST, H-12<br />Islamabad 44000, Pakistan
           </p>
-          <a href="mailto:sales@silkrouteint.com" style={{ fontFamily: BF, fontSize: '13px', color: C.cyan, display: 'block', marginBottom: '6px' }}>
-            sales@silkrouteint.com
+          <a href="mailto:sia@syedirfanajmal.com" style={{ fontFamily: BF, fontSize: '13px', color: C.cyan, display: 'block', marginBottom: '16px' }}>
+            sia@syedirfanajmal.com
           </a>
-          <p style={{ fontFamily: BF, fontSize: '13px', color: 'rgba(255,255,255,0.45)', margin: '0 0 16px' }}>
-            +92-(0)51-9085-6318
-          </p>
           <div style={{ display: 'flex', gap: '16px' }}>
             {['LinkedIn', 'Twitter', 'Facebook'].map(s => (
               <span

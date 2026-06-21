@@ -3,9 +3,9 @@ import PageHero from '@/components/PageHero'
 import Lbl from '@/components/Lbl'
 
 const STATS = [
-  ['25,000+', 'Anonymous rigging reports received'],
+  ['20,000+', 'Reports on election day alone (May 11, 2013)'],
+  ['25,000+', 'Total anonymous reports received'],
   ['4', 'Reporting channels'],
-  ['100%', 'Reports publicly available'],
 ]
 
 const CHANNELS = [
