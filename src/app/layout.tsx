@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import { ArchiveBannerTop } from '@/components/ArchiveBanner'
 
 export const metadata: Metadata = {
   title: 'Silk Route Interactive — Company Archive',
@@ -20,8 +21,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <ArchiveBannerTop />
         <Nav />
-        <main style={{ paddingTop: '58px' }}>{children}</main>
+        <main style={{ paddingTop: '94px' }}>{children}</main>
         <Footer />
       </body>
     </html>

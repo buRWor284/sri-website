@@ -47,7 +47,7 @@ export default function Nav() {
     <nav
       style={{
         position: 'fixed',
-        top: 0,
+        top: 36,
         left: 0,
         right: 0,
         zIndex: 100,
@@ -146,7 +146,7 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {mobile && mob && (
-        <div style={{ position: 'fixed', top: '58px', left: 0, right: 0, background: 'rgba(9,9,7,0.97)', borderTop: `1px solid ${C.border}`, zIndex: 99, paddingBottom: '8px' }}>
+        <div style={{ position: 'fixed', top: '94px', left: 0, right: 0, background: 'rgba(9,9,7,0.97)', borderTop: `1px solid ${C.border}`, zIndex: 99, paddingBottom: '8px' }}>
           {[{ label: 'Home', href: '/' }, ...NAV_LINKS].map(({ label, href }) => (
             <div key={href}>
               <Link href={href} style={{ display: 'block', padding: '14px 24px', fontFamily: BODY, fontSize: '13px', letterSpacing: '0.04em', color: isActive(href) ? C.cyan : '#7E7A72', borderBottom: `1px solid ${C.borderDarkest}`, textDecoration: 'none' }}>
