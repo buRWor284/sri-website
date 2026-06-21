@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Dark background -->
+  <rect width="32" height="32" fill="#090907"/>
+  <!-- Outer square — cyan border, slightly opaque, flush to edge like nav logo mark -->
+  <rect x="1" y="1" width="30" height="30" fill="none" stroke="#20C4E8" stroke-width="1.5" opacity="0.7"/>
+  <!-- Inner filled square — inset 8px (matches nav logo's inset:6px at 24px scaled to 32px) -->
+  <rect x="8" y="8" width="16" height="16" fill="#20C4E8"/>
+</svg>
