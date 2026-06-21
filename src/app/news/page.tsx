@@ -14,12 +14,12 @@ export default function News() {
     <div>
       <PageHero label="Press & Updates" title="News" />
 
-      <section style={{ background: C.white, padding: '80px 40px' }}>
+      <section style={{ background: C.bg, padding: '72px 40px' }}>
         <div style={{ maxWidth: '860px', margin: '0 auto' }}>
           {/* Featured article */}
-          <div style={{ border: `1px solid ${C.border}`, borderTop: `3px solid ${C.cyan}`, padding: '40px', borderRadius: '2px', marginBottom: '24px', boxShadow: '0 2px 16px rgba(0,0,0,0.06)' }}>
+          <div style={{ border: `1px solid ${C.border}`, borderTop: `3px solid ${C.cyan}`, padding: '40px', marginBottom: '24px' }}>
             <div style={{ display: 'flex', gap: '12px', alignItems: 'center', marginBottom: '16px' }}>
-              <span style={{ background: C.cyanL, color: C.cyan, fontFamily: DF, fontSize: '9px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', padding: '4px 10px', borderRadius: '2px' }}>Award</span>
+              <span style={{ background: 'rgba(32,196,232,0.08)', color: C.cyan, border: '1px solid rgba(32,196,232,0.25)', fontFamily: DF, fontSize: '9px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', padding: '4px 10px' }}>Award</span>
               <span style={{ fontFamily: DF, fontSize: '11px', letterSpacing: '0.06em', color: C.gray }}>27 June 2013</span>
             </div>
             <h2 style={{ fontFamily: DF, fontSize: '1.5rem', fontWeight: 600, color: C.dark, margin: '0 0 16px', lineHeight: '1.3', letterSpacing: '0.02em' }}>
@@ -30,7 +30,7 @@ export default function News() {
               Among 165 applications, we pitched The Crime Mapper — a crime mapping solution with a 6-month pilot that reduced crime
               by 34% in just 3 months in Faisalabad.
             </p>
-            <div style={{ display: 'flex', gap: '28px', padding: '18px', background: C.subtle, borderRadius: '2px', marginBottom: '20px' }}>
+            <div style={{ display: 'flex', gap: '28px', padding: '18px', background: C.bgAlt, marginBottom: '20px' }}>
               {[['165', 'Applications'], ['20', 'Shortlisted'], ['34%', 'Crime reduction']].map(([n, l]) => (
                 <div key={l}>
                   <div style={{ fontFamily: DF, fontSize: '1.4rem', fontWeight: 700, color: C.cyan }}>{n}</div>
@@ -52,7 +52,7 @@ export default function News() {
               style={{ display: 'flex', gap: '18px', padding: '16px 8px', borderBottom: `1px solid ${C.border}`, alignItems: 'center', cursor: 'pointer' }}
             >
               <span style={{ fontFamily: DF, fontSize: '10px', letterSpacing: '0.06em', color: C.gray, flexShrink: 0, minWidth: '80px' }}>{n.date}</span>
-              <span style={{ background: C.cyanL, color: C.cyan, fontFamily: DF, fontSize: '9px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '3px 8px', borderRadius: '2px', flexShrink: 0 }}>
+              <span style={{ background: 'rgba(32,196,232,0.08)', color: C.cyan, border: '1px solid rgba(32,196,232,0.25)', fontFamily: DF, fontSize: '9px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '3px 8px', flexShrink: 0 }}>
                 {n.tag}
               </span>
               <h3 style={{ fontFamily: DF, fontSize: '14px', fontWeight: 600, color: C.dark, margin: 0, lineHeight: '1.4', letterSpacing: '0.01em' }}>

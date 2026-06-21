@@ -33,7 +33,7 @@ export default function MyVote() {
       />
 
       {/* Banner image */}
-      <div style={{ background: C.nav, borderBottom: `1px solid ${C.border}` }}>
+      <div style={{ background: C.bg }}>
         <Image
           src="/images/my_vote_sri.jpg"
           alt="MyVote.pk — Find Your Constituency, Pakistan Electoral Map"
@@ -44,7 +44,7 @@ export default function MyVote() {
         />
       </div>
 
-      <section style={{ background: C.white, padding: '80px 40px' }}>
+      <section style={{ background: C.bg, padding: '72px 40px' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '60px' }}>
           <div>
             <Lbl style={{ marginBottom: '14px', display: 'block' }}>What You Can Find</Lbl>
@@ -61,7 +61,7 @@ export default function MyVote() {
           <div>
             <Lbl style={{ marginBottom: '14px', display: 'block' }}>How to Use</Lbl>
             {HOW_TO.map(h => (
-              <div key={h.title} style={{ padding: '18px', background: C.subtle, border: `1px solid ${C.border}`, borderRadius: '2px', marginBottom: '12px' }}>
+              <div key={h.title} style={{ padding: '18px', background: C.bgAlt, border: `1px solid ${C.border}`, marginBottom: '12px' }}>
                 <p style={{ fontFamily: DF, fontWeight: 600, fontSize: '12px', letterSpacing: '0.07em', textTransform: 'uppercase', color: C.dark, margin: '0 0 8px' }}>
                   {h.title}
                 </p>

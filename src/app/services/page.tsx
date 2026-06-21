@@ -41,7 +41,7 @@ export default function Services() {
         sub="We bring a holistic approach aligning organizational objectives with technical solutions — ensuring impactful outcomes across spatial, predictive, and optimization analytics."
       />
 
-      <section style={{ background: C.white, padding: '80px 40px' }}>
+      <section style={{ background: C.bg, padding: '72px 40px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '64px' }}>
           {/* Left column */}
           <div>
@@ -54,14 +54,14 @@ export default function Services() {
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '32px' }}>
               {TAGS.map(t => (
-                <span key={t} style={{ background: C.cyanL, color: C.cyanD, fontFamily: DF, fontSize: '9px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '5px 12px', borderRadius: '2px' }}>
+                <span key={t} style={{ background: 'rgba(32,196,232,0.08)', color: C.cyan, border: '1px solid rgba(32,196,232,0.25)', fontFamily: DF, fontSize: '9px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '5px 12px' }}>
                   {t}
                 </span>
               ))}
             </div>
 
             <Lbl style={{ marginBottom: '12px', display: 'block' }}>Technology & Management Consulting</Lbl>
-            <div style={{ background: C.subtle, border: `1px solid ${C.border}`, borderRadius: '2px', padding: '18px' }}>
+            <div style={{ background: C.bgAlt, border: `1px solid ${C.border}`, padding: '18px' }}>
               {TECH_SERVICES.map((t, i) => (
                 <div key={i} style={{ display: 'flex', gap: '10px', padding: '6px 0', borderBottom: i < TECH_SERVICES.length - 1 ? `1px solid ${C.border}` : 'none', alignItems: 'flex-start' }}>
                   <span style={{ color: C.cyan, flexShrink: 0, marginTop: '2px', fontSize: '12px' }}>→</span>
@@ -100,7 +100,7 @@ export default function Services() {
                       ))}
                     </ul>
                     {s.caseStudy && (
-                      <div style={{ background: C.cyanL, border: `1px solid rgba(0,188,236,0.25)`, borderRadius: '2px', padding: '8px 12px', marginTop: '4px' }}>
+                      <div style={{ background: 'rgba(32,196,232,0.08)', border: `1px solid rgba(32,196,232,0.25)`, padding: '8px 12px', marginTop: '4px' }}>
                         <span style={{ fontFamily: DF, fontSize: '9px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: C.cyan }}>Case Study — </span>
                         <span style={{ fontFamily: BF, fontSize: '12px', color: C.gray }}>{s.caseStudy}</span>
                       </div>

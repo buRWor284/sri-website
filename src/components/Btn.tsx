@@ -1,52 +1,31 @@
 import { CSSProperties } from 'react'
 import Link from 'next/link'
-import { DF } from '@/lib/tokens'
+import { BODY } from '@/lib/tokens'
 
 type BtnVariant = 'primary' | 'outline' | 'ghost' | 'out-dark'
-type BtnSize = 'sm' | 'md' | 'lg'
+type BtnSize    = 'sm' | 'md' | 'lg'
 
 interface BtnProps {
-  children: React.ReactNode
-  variant?: BtnVariant
-  size?: BtnSize
-  href?: string
-  onClick?: () => void
-  type?: 'button' | 'submit'
-  style?: CSSProperties
+  children:  React.ReactNode
+  variant?:  BtnVariant
+  size?:     BtnSize
+  href?:     string
+  onClick?:  () => void
+  type?:     'button' | 'submit'
+  style?:    CSSProperties
 }
 
-export default function Btn({
-  children,
-  variant = 'primary',
-  size = 'md',
-  href,
-  onClick,
-  type = 'button',
-  style,
-}: BtnProps) {
-  const base: CSSProperties = {
-    fontFamily: DF,
-    fontWeight: 600,
-    letterSpacing: '0.12em',
-    textTransform: 'uppercase',
-    border: 'none',
-    outline: 'none',
-    ...style,
-  }
+const variantClass: Record<BtnVariant, string> = {
+  primary:  'btn-primary-new',
+  outline:  'nav-cta',
+  ghost:    'btn-secondary-new',
+  'out-dark': 'btn-secondary-new',
+}
 
-  const cls = `btn btn-${variant === 'out-dark' ? 'out-dark' : variant} btn-${size}`
+export default function Btn({ children, variant = 'primary', href, onClick, type = 'button', style }: BtnProps) {
+  const base: CSSProperties = { fontFamily: BODY, ...style }
+  const cls = variantClass[variant]
 
-  if (href) {
-    return (
-      <Link href={href} className={cls} style={base}>
-        {children}
-      </Link>
-    )
-  }
-
-  return (
-    <button type={type} onClick={onClick} className={cls} style={base}>
-      {children}
-    </button>
-  )
+  if (href) return <Link href={href} className={cls} style={base}>{children}</Link>
+  return <button type={type} onClick={onClick} className={cls} style={base}>{children}</button>
 }

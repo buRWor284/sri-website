@@ -1,19 +1,18 @@
 import { CSSProperties } from 'react'
-import { C, DF } from '@/lib/tokens'
+import { C, MONO } from '@/lib/tokens'
 
 interface LblProps {
   children: React.ReactNode
-  style?: CSSProperties
+  style?:   CSSProperties
 }
 
 export default function Lbl({ children, style }: LblProps) {
   return (
     <span
       style={{
-        fontFamily: DF,
-        fontSize: '10px',
-        fontWeight: 700,
-        letterSpacing: '0.25em',
+        fontFamily: MONO,
+        fontSize: '9px',
+        letterSpacing: '0.2em',
         textTransform: 'uppercase',
         color: C.cyan,
         ...style,

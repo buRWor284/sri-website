@@ -48,23 +48,23 @@ export default function Products() {
         sub="We conceptualize and build tools that give organizations meaningful real-time insights into data for planning and decision making."
       />
 
-      <section style={{ background: C.white, padding: '80px 40px' }}>
+      <section style={{ background: C.bg, padding: '72px 40px' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '24px' }}>
           {PRODUCTS.map(p => (
             <Link
               key={p.href}
               href={p.href}
               className="product-card-lg"
-              style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', border: `1px solid ${C.border}`, borderRadius: '2px', overflow: 'hidden', boxShadow: '0 2px 16px rgba(0,0,0,0.06)', textDecoration: 'none' }}
+              style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', border: `1px solid ${C.border}`, overflow: 'hidden', textDecoration: 'none' }}
             >
-              <div style={{ padding: '40px', background: C.white }}>
+              <div style={{ padding: '40px', background: C.bg }}>
                 <span style={{ fontFamily: DF, fontSize: '9px', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.gray }}>{p.tag}</span>
                 <h2 style={{ fontFamily: DF, fontWeight: 600, fontSize: '1.35rem', color: C.dark, margin: '8px 0 4px', letterSpacing: '0.02em' }}>{p.name}</h2>
                 <p style={{ fontFamily: DF, fontWeight: 300, fontSize: '0.95rem', color: C.cyan, margin: '0 0 18px', fontStyle: 'italic', letterSpacing: '0.04em' }}>{p.tagline}</p>
                 <p style={{ fontFamily: BF, fontSize: '15px', color: C.gray, lineHeight: '1.7', margin: '0 0 24px' }}>{p.desc}</p>
                 <span style={{ fontFamily: DF, fontSize: '10px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: C.cyan }}>View Details →</span>
               </div>
-              <div style={{ background: `linear-gradient(135deg, ${C.hero} 0%, #0a2438 100%)`, ...gridPattern, padding: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '18px' }}>
+              <div style={{ background: 'linear-gradient(135deg, #0A0A08 0%, #0D0B08 100%)', ...gridPattern, padding: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '18px' }}>
                 {p.stats.map(([n, l]) => (
                   <div key={l}>
                     <div style={{ fontFamily: DF, fontWeight: 700, fontSize: '1.85rem', color: C.cyan, letterSpacing: '0.02em' }}>{n}</div>
@@ -76,7 +76,7 @@ export default function Products() {
           ))}
 
           {/* Constituency Maps */}
-          <div style={{ background: C.subtle, border: `1px solid ${C.border}`, borderRadius: '2px', padding: '36px', display: 'grid', gridTemplateColumns: '1fr auto', gap: '24px', alignItems: 'center' }}>
+          <div style={{ background: C.bgAlt, border: `1px solid ${C.border}`, padding: '36px', display: 'grid', gridTemplateColumns: '1fr auto', gap: '24px', alignItems: 'center' }}>
             <div>
               <Lbl style={{ marginBottom: '10px', display: 'block' }}>Geospatial Data</Lbl>
               <h2 style={{ fontFamily: DF, fontWeight: 600, fontSize: '1.15rem', color: C.dark, margin: '0 0 10px' }}>Constituency Maps of Pakistan</h2>

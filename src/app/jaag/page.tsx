@@ -25,7 +25,7 @@ export default function Jaag() {
         tall
       />
 
-      <section style={{ background: C.white, padding: '80px 40px' }}>
+      <section style={{ background: C.bg, padding: '72px 40px' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '60px', marginBottom: '56px' }}>
             <div>
@@ -53,7 +53,7 @@ export default function Jaag() {
           <Lbl style={{ marginBottom: '16px', display: 'block' }}>How to Report Rigging</Lbl>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
             {CHANNELS.map(([ch, how], i) => (
-              <div key={ch} style={{ padding: '20px', border: `1px solid ${C.border}`, borderTop: `3px solid ${C.cyan}`, borderRadius: '2px' }}>
+              <div key={ch} style={{ padding: '20px', border: `1px solid ${C.border}`, borderTop: `3px solid ${C.cyan}` }}>
                 <div style={{ fontFamily: DF, fontWeight: 700, fontSize: '10px', letterSpacing: '0.15em', textTransform: 'uppercase', color: C.cyan, marginBottom: '8px' }}>
                   {i + 1}. {ch}
                 </div>

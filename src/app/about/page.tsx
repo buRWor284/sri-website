@@ -63,7 +63,7 @@ export default function About() {
     <div>
       <PageHero label="Who We Are" title="About Silk Route Interactive" />
 
-      <section style={{ background: C.white, padding: '80px 40px' }}>
+      <section style={{ background: C.bg, padding: '72px 40px' }}>
         <div style={{ maxWidth: '780px', margin: '0 auto' }}>
           <p style={{ fontFamily: BF, fontSize: '18px', color: C.dark, lineHeight: '1.8', margin: '0 0 22px' }}>
             We at Silk Route Interactive are a team of experienced, ambitious and prolific GIS specialists, software engineers,
@@ -75,7 +75,7 @@ export default function About() {
           </p>
 
           {/* Key Distinction callout */}
-          <div style={{ borderLeft: `4px solid ${C.cyan}`, background: C.subtle, padding: '22px 22px 22px 24px', margin: '0 0 36px', borderRadius: '0 2px 2px 0' }}>
+          <div style={{ borderLeft: '3px solid rgba(32,196,232,0.4)', background: C.bgAlt, padding: '20px 20px 20px 22px', margin: '0 0 36px' }}>
             <Lbl style={{ marginBottom: '10px', display: 'block' }}>Key Distinction</Lbl>
             <p style={{ fontFamily: DF, fontSize: '1.05rem', fontWeight: 400, color: C.dark, lineHeight: '1.65', margin: 0 }}>
               Silk Route Interactive is the first and the only company in the world to have digitized all the constituency maps
@@ -84,7 +84,7 @@ export default function About() {
           </div>
 
           {/* Legacy Archive Note */}
-          <div style={{ borderLeft: `4px solid rgba(0,188,236,0.4)`, background: '#f9f9f9', padding: '22px 22px 22px 24px', margin: '0 0 40px', borderRadius: '0 2px 2px 0' }}>
+          <div style={{ borderLeft: '3px solid rgba(32,196,232,0.4)', background: C.bgAlt, padding: '20px 20px 20px 22px', margin: '0 0 40px' }}>
             <Lbl style={{ marginBottom: '10px', display: 'block' }}>A Note on This Archive</Lbl>
             <p style={{ fontFamily: BF, fontSize: '14px', color: C.gray, lineHeight: '1.8', margin: 0 }}>
               Silk Route Interactive operated from 2012 to 2014 — self-funded, profitable, and purpose-built. We didn&apos;t wind down from failure; we retired something that worked. This site is preserved as a living archive: a record of the products we shipped, the problems we solved, and the team that made it happen. The good old days, kept online.
@@ -98,7 +98,7 @@ export default function About() {
           {AWARDS.map(a => (
             <div
               key={a.title}
-              style={{ display: 'flex', gap: '16px', padding: '18px', background: C.subtle, border: `1px solid ${C.border}`, borderRadius: '2px', marginBottom: '12px', alignItems: 'flex-start' }}
+              style={{ display: 'flex', gap: '16px', padding: '18px', background: C.bgAlt, border: `1px solid ${C.border}`, marginBottom: '12px', alignItems: 'flex-start' }}
             >
               <div style={{ width: '38px', height: '38px', background: C.cyan, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '16px', color: '#fff' }}>
                 {a.icon}
@@ -117,7 +117,7 @@ export default function About() {
       </section>
 
       {/* Founders */}
-      <section style={{ background: C.subtle, padding: '80px 40px', borderTop: `1px solid ${C.border}` }}>
+      <section style={{ background: C.bgAlt, padding: '72px 40px', borderTop: `1px solid ${C.border}` }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <Lbl style={{ marginBottom: '12px', display: 'block', textAlign: 'center' }}>The Team</Lbl>
           <h2 style={{ fontFamily: DF, fontWeight: 300, fontSize: '2rem', color: C.dark, textAlign: 'center', margin: '0 0 48px' }}>

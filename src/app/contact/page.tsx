@@ -22,10 +22,10 @@ export default function Contact() {
     <div>
       <PageHero label="Company Archive" title="Get In Touch" />
 
-      <section style={{ background: C.white, padding: '80px 40px' }}>
+      <section style={{ background: C.bg, padding: '72px 40px' }}>
         <div style={{ maxWidth: '640px', margin: '0 auto' }}>
 
-          <div style={{ borderLeft: '4px solid rgba(0,188,236,0.4)', background: '#f9f9f9', padding: '22px 22px 22px 24px', margin: '0 0 48px', borderRadius: '0 2px 2px 0' }}>
+          <div style={{ borderLeft: '3px solid rgba(32,196,232,0.4)', background: C.bgAlt, padding: '20px 20px 20px 22px', margin: '0 0 48px' }}>
             <Lbl style={{ marginBottom: '10px', display: 'block' }}>No Longer Active</Lbl>
             <p style={{ fontFamily: BF, fontSize: '14px', color: C.gray, lineHeight: '1.8', margin: 0 }}>
               SRI closed in 2014. If you worked with us, covered our products, or just want to connect — reach out to the founder directly at the email below.

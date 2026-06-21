@@ -37,17 +37,17 @@ export default function CrimeMapper() {
     <div>
       <PageHero label="SRI Product" title="The Crime Mapper" sub="Map. Predict. Prevent." tall>
         <div style={{ marginTop: '28px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-          <span style={{ background: C.cyanL, color: C.cyan, fontFamily: DF, fontSize: '10px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', padding: '5px 16px', border: `1px solid rgba(0,188,236,0.3)`, borderRadius: '2px' }}>
+          <span style={{ background: 'rgba(32,196,232,0.08)', color: C.cyan, fontFamily: DF, fontSize: '10px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', padding: '5px 16px', border: `1px solid rgba(32,196,232,0.25)` }}>
             ★ P@SHA Best Start-Up — LaunchPad 2013
           </span>
-          <span style={{ background: C.cyanL, color: C.cyan, fontFamily: DF, fontSize: '10px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', padding: '5px 16px', border: `1px solid rgba(0,188,236,0.3)`, borderRadius: '2px' }}>
+          <span style={{ background: 'rgba(32,196,232,0.08)', color: C.cyan, fontFamily: DF, fontSize: '10px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', padding: '5px 16px', border: `1px solid rgba(32,196,232,0.25)` }}>
             ● Deployed — Faisalabad Police Department
           </span>
         </div>
       </PageHero>
 
       {/* Pull Quote */}
-      <div style={{ background: C.nav, padding: '52px 40px' }}>
+      <div style={{ background: C.bgWarm, padding: '52px 40px' }}>
         <div style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
           <div style={{ width: '32px', height: '2px', background: C.cyan, margin: '0 auto 22px' }} />
           <p style={{ fontFamily: DF, fontWeight: 200, fontSize: 'clamp(1rem,2.5vw,1.35rem)', color: '#fff', lineHeight: '1.65', margin: '0 0 18px', fontStyle: 'italic', letterSpacing: '0.02em' }}>
@@ -58,7 +58,7 @@ export default function CrimeMapper() {
       </div>
 
       {/* Outcome Stats */}
-      <section style={{ background: C.white, padding: '80px 40px' }}>
+      <section style={{ background: C.bg, padding: '72px 40px' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <Lbl style={{ marginBottom: '12px', display: 'block', textAlign: 'center' }}>Measured Outcomes</Lbl>
           <h2 style={{ fontFamily: DF, fontWeight: 300, fontSize: '2rem', color: C.dark, textAlign: 'center', margin: '0 0 40px' }}>
@@ -68,7 +68,7 @@ export default function CrimeMapper() {
             {OUTCOMES.map(o => (
               <div
                 key={o.stat}
-                style={{ padding: '30px 26px', border: `1px solid ${C.border}`, borderTop: `3px solid ${C.cyan}`, borderRadius: '2px', background: C.subtle }}
+                style={{ padding: '30px 26px', border: `1px solid ${C.border}`, borderTop: `3px solid ${C.cyan}`, background: C.bgAlt }}
               >
                 <div style={{ fontFamily: DF, fontWeight: 700, fontSize: '2.4rem', color: C.cyan, letterSpacing: '0.02em', marginBottom: '8px' }}>{o.stat}</div>
                 <p style={{ fontFamily: DF, fontSize: '12px', fontWeight: 700, color: C.dark, margin: '0 0 6px', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{o.label}</p>
@@ -84,7 +84,7 @@ export default function CrimeMapper() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px', marginBottom: '60px' }}>
             {PHASES.map(p => (
-              <div key={p.phase} style={{ padding: '26px', border: `1px solid ${C.border}`, borderRadius: '2px' }}>
+              <div key={p.phase} style={{ padding: '26px', border: `1px solid ${C.border}` }}>
                 <div style={{ fontFamily: DF, fontWeight: 700, fontSize: '1.6rem', color: `rgba(0,188,236,0.25)`, marginBottom: '10px', letterSpacing: '0.05em' }}>{p.phase}</div>
                 <h3 style={{ fontFamily: DF, fontSize: '12px', fontWeight: 700, color: C.dark, margin: '0 0 10px', letterSpacing: '0.07em', textTransform: 'uppercase' }}>{p.title}</h3>
                 <p style={{ fontFamily: BF, fontSize: '14px', color: C.gray, lineHeight: '1.65', margin: 0 }}>{p.desc}</p>
@@ -94,7 +94,7 @@ export default function CrimeMapper() {
 
           {/* Context */}
           <div
-            style={{ background: C.nav, ...gridPattern, padding: '40px', borderRadius: '2px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '36px' }}
+            style={{ background: C.bgAlt, ...gridPattern, padding: '40px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '36px' }}
           >
             <div>
               <Lbl style={{ marginBottom: '12px', display: 'block' }}>The Problem</Lbl>
