@@ -4,10 +4,10 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Silk Route Interactive — GIS-Enabled Interactive Mapping Solutions',
+  title: 'Silk Route Interactive — Company Archive',
   description:
-    "Pakistan's premier Spatial Intelligence firm. We amplify the value of business analytics by bringing in the locational context through advanced GIS, Business Intelligence, and Data Visualization.",
-  keywords: 'GIS, spatial intelligence, mapping, Pakistan, ElectoMap, geospatial, data visualization',
+    "Archive of Silk Route Interactive (2012–2014) — Pakistan's award-winning Spatial Intelligence startup. Builders of ElectoMap, Jaag Pakistan, and MyVote.pk.",
+  keywords: 'GIS, spatial intelligence, mapping, Pakistan, ElectoMap, Jaag Pakistan, geospatial, data visualization, Silk Route Interactive',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
