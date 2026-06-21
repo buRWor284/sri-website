@@ -12,7 +12,7 @@ const BENEFITS = [
 
 export default function ElectoMap() {
   return (
-    <div>
+    <div className="page-section">
       <PageHero label="SRI Product" title="ElectoMap Pakistan" sub="Touch. Analyze. Present." tall>
         <div style={{ marginTop: '28px' }}>
           <span style={{ background: 'rgba(32,196,232,0.08)', color: C.cyan, fontFamily: DF, fontSize: '10px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', padding: '5px 16px', border: `1px solid rgba(32,196,232,0.25)` }}>
@@ -22,7 +22,7 @@ export default function ElectoMap() {
       </PageHero>
 
       {/* Pull Quote */}
-      <div style={{ background: C.bgWarm, padding: '52px 40px' }}>
+      <div className="inner-pull-quote" style={{ background: C.bgWarm, padding: '52px 40px' }}>
         <div style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
           <div style={{ width: '32px', height: '2px', background: C.cyan, margin: '0 auto 22px' }} />
           <p style={{ fontFamily: DF, fontWeight: 200, fontSize: 'clamp(1rem,2.5vw,1.35rem)', color: '#fff', lineHeight: '1.65', margin: '0 0 18px', fontStyle: 'italic', letterSpacing: '0.02em' }}>

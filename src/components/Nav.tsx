@@ -61,6 +61,7 @@ export default function Nav() {
       }}
     >
       <div
+        className="nav-inner"
         style={{
           maxWidth: '1360px',
           margin: '0 auto',
@@ -82,7 +83,7 @@ export default function Nav() {
           <span style={{ fontFamily: BODY, fontWeight: 600, fontSize: '13px', letterSpacing: '0.1em', textTransform: 'uppercase', color: C.textPrimary }}>
             Silk Route Interactive
           </span>
-          <span style={{ fontFamily: MONO, fontSize: '9px', letterSpacing: '0.1em', color: C.textGhost, borderLeft: '1px solid #1E1D1B', paddingLeft: '10px', marginLeft: '2px' }}>
+          <span className="nav-archive-badge" style={{ fontFamily: MONO, fontSize: '9px', letterSpacing: '0.1em', color: C.textGhost, borderLeft: '1px solid #1E1D1B', paddingLeft: '10px', marginLeft: '2px' }}>
             ARCHIVE
           </span>
         </Link>

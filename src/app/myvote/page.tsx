@@ -25,7 +25,7 @@ const HOW_TO = [
 
 export default function MyVote() {
   return (
-    <div>
+    <div className="page-section">
       <PageHero
         label="SRI Product"
         title="MyVote.pk"

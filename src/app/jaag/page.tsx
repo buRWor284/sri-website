@@ -17,7 +17,7 @@ const CHANNELS = [
 
 export default function Jaag() {
   return (
-    <div>
+    <div className="page-section">
       <PageHero
         label="SRI Product"
         title="Jaag Pakistan"

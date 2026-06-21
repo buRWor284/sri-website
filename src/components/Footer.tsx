@@ -25,7 +25,7 @@ export default function Footer() {
   return (
     <footer style={{ background: C.bg }}>
       {/* Main grid */}
-      <div style={{ maxWidth: '1360px', margin: '0 auto', display: 'grid', gridTemplateColumns: '2.2fr 1fr 1fr 1.1fr', gap: '64px', padding: '80px 40px 64px' }}>
+      <div className="footer-grid" style={{ maxWidth: '1360px', margin: '0 auto', display: 'grid', gridTemplateColumns: '2.2fr 1fr 1fr 1.1fr', gap: '64px', padding: '80px 40px 64px' }}>
 
         {/* Col 1 — Brand */}
         <div>
@@ -87,7 +87,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div style={{ borderTop: '1px solid #111010', background: C.bgBottom }}>
-        <div style={{ maxWidth: '1360px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px 40px', flexWrap: 'wrap', gap: '8px' }}>
+        <div className="footer-bottom-bar" style={{ maxWidth: '1360px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px 40px', flexWrap: 'wrap', gap: '8px' }}>
           <span style={{ fontFamily: MONO, fontSize: '9px', letterSpacing: '0.07em', color: '#252320' }}>
             Silk Route Interactive was fully self-funded by its founders and operated profitably from 2012 to 2014.
           </span>

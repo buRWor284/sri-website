@@ -30,7 +30,7 @@ export default function PageHero({ label, title, sub, tall, children }: PageHero
       {/* Top accent line */}
       <div aria-hidden="true" style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(90deg, transparent 0%, rgba(32,196,232,0.3) 30%, rgba(32,196,232,0.6) 50%, rgba(32,196,232,0.3) 70%, transparent 100%)', pointerEvents: 'none' }} />
 
-      <div style={{ maxWidth: '1360px', margin: '0 auto', padding: `${paddingTop} 40px ${paddingBottom}` }}>
+      <div className="page-hero-inner" style={{ maxWidth: '1360px', margin: '0 auto', padding: `${paddingTop} 40px ${paddingBottom}` }}>
         {label && (
           <div style={{ fontFamily: MONO, fontSize: '9px', letterSpacing: '0.2em', color: C.cyan, textTransform: 'uppercase', marginBottom: '18px' }}>
             {label}

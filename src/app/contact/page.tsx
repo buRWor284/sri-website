@@ -19,7 +19,7 @@ const DETAILS = [
 
 export default function Contact() {
   return (
-    <div>
+    <div className="page-section">
       <PageHero label="Company Archive" title="Get In Touch" />
 
       <section style={{ background: C.bg, padding: '72px 40px' }}>

@@ -51,6 +51,7 @@ export default function Home() {
 
       {/* ── 1. HERO ── */}
       <section
+        className="hero-section-outer"
         style={{
           position: 'relative',
           minHeight: '100vh',
@@ -73,13 +74,13 @@ export default function Home() {
           <div style={{ position: 'absolute', inset: 0, width: '40%', background: 'radial-gradient(ellipse 100% 60% at 0% 60%, rgba(32,196,232,0.055) 0%, transparent 70%)' }} />
         </div>
 
-        <div style={{ maxWidth: '1360px', margin: '0 auto', padding: '0 40px', width: '100%', position: 'relative', display: 'flex', gap: '72px', alignItems: 'center' }}>
+        <div className="hero-inner" style={{ maxWidth: '1360px', margin: '0 auto', padding: '0 40px', width: '100%', position: 'relative', display: 'flex', gap: '72px', alignItems: 'center' }}>
 
           {/* Left column */}
           <div style={{ flex: 1, minWidth: 0 }}>
 
             {/* Archive badge */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '52px', animation: 'fadeIn 0.7s ease 0s forwards', opacity: 0 }}>
+            <div className="hero-badge" style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '52px', animation: 'fadeIn 0.7s ease 0s forwards', opacity: 0 }}>
               <span style={{ width: '5px', height: '5px', background: C.cyan, flexShrink: 0, display: 'inline-block', animation: 'blink 2.4s ease infinite' }} />
               <span style={{ fontFamily: MONO, fontSize: '10px', letterSpacing: '0.16em', color: C.cyan, textTransform: 'uppercase' }}>Company Archive</span>
               <span style={{ fontFamily: MONO, fontSize: '10px', color: '#2E2D2A' }}>·</span>
@@ -89,7 +90,7 @@ export default function Home() {
             </div>
 
             {/* H1 */}
-            <h1 style={{ fontFamily: DISPLAY, fontSize: 'clamp(60px, 7.8vw, 122px)', lineHeight: 0.92, letterSpacing: '-0.015em', margin: 0, animation: 'fadeUp 0.85s ease 0.12s forwards', opacity: 0 }}>
+            <h1 style={{ fontFamily: DISPLAY, fontSize: 'clamp(50px, 7.8vw, 122px)', lineHeight: 0.92, letterSpacing: '-0.015em', margin: 0, animation: 'fadeUp 0.85s ease 0.12s forwards', opacity: 0 }}>
               <span style={{ color: C.textPrimary, display: 'block', fontStyle: 'italic', fontWeight: 300 }}>GIS-Enabled</span>
               <span style={{ color: C.cyan,        display: 'block', fontStyle: 'italic', fontWeight: 300 }}>Interactive</span>
               <span style={{ color: C.textPrimary, display: 'block', fontStyle: 'italic', fontWeight: 300 }}>Mapping</span>
@@ -108,7 +109,7 @@ export default function Home() {
             </div>
 
             {/* Year rule */}
-            <div style={{ marginTop: '88px', paddingTop: '22px', borderTop: `1px solid ${C.border}`, display: 'flex', alignItems: 'center', animation: 'fadeIn 0.9s ease 0.6s forwards', opacity: 0 }}>
+            <div className="hero-year-rule" style={{ marginTop: '88px', paddingTop: '22px', borderTop: `1px solid ${C.border}`, display: 'flex', alignItems: 'center', animation: 'fadeIn 0.9s ease 0.6s forwards', opacity: 0 }}>
               <span style={{ fontFamily: MONO, fontSize: '10px', color: '#2E2D2A' }}>Est. 2012</span>
               <div style={{ flex: 1, height: '1px', background: 'linear-gradient(90deg, #222120 0%, #333130 50%, #222120 100%)', margin: '0 18px' }} />
               <span style={{ fontFamily: MONO, fontSize: '10px', color: '#2E2D2A' }}>Dissolved 2014</span>
@@ -116,9 +117,9 @@ export default function Home() {
           </div>
 
           {/* Right column — Reticle + Stats */}
-          <div style={{ width: '310px', flexShrink: 0, paddingTop: '12px', animation: 'fadeIn 1s ease 0.5s forwards', opacity: 0 }}>
+          <div className="hero-right-col" style={{ width: '310px', flexShrink: 0, paddingTop: '12px', animation: 'fadeIn 1s ease 0.5s forwards', opacity: 0 }}>
             {/* Reticle */}
-            <div style={{ position: 'relative', width: '190px', height: '190px', margin: '0 auto 36px' }}>
+            <div className="hero-reticle" style={{ position: 'relative', width: '190px', height: '190px', margin: '0 auto 36px' }}>
               <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '1px solid rgba(32,196,232,0.22)' }} />
               <div style={{ position: 'absolute', inset: '28px', borderRadius: '50%', border: '1px solid rgba(32,196,232,0.16)' }} />
               <div style={{ position: 'absolute', inset: '62px', borderRadius: '50%', border: '1px solid rgba(32,196,232,0.28)' }} />
@@ -128,7 +129,7 @@ export default function Home() {
             </div>
 
             {/* Coordinates */}
-            <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+            <div className="hero-coords" style={{ textAlign: 'center', marginBottom: '24px' }}>
               <div style={{ fontFamily: MONO, fontSize: '11px', letterSpacing: '0.09em', color: 'rgba(32,196,232,0.5)' }}>33°41′N 73°03′E</div>
               <div style={{ fontFamily: MONO, fontSize: '9px', letterSpacing: '0.1em', color: '#2E2D2A', marginTop: '5px' }}>ISLAMABAD, PAKISTAN</div>
             </div>
@@ -158,9 +159,9 @@ export default function Home() {
 
       {/* ── 2. ACHIEVEMENTS STRIP ── */}
       <div style={{ background: C.bgStrip, borderTop: `1px solid ${C.borderFaint}`, borderBottom: `1px solid ${C.borderFaint}` }}>
-        <div style={{ maxWidth: '1360px', margin: '0 auto', display: 'flex' }}>
+        <div className="achievements-strip" style={{ maxWidth: '1360px', margin: '0 auto', display: 'flex' }}>
           {ACHIEVEMENTS.map((a, i) => (
-            <div key={i} style={{ flex: 1, padding: '20px 24px', borderRight: i < ACHIEVEMENTS.length - 1 ? `1px solid ${C.borderFaint}` : 'none', display: 'flex', alignItems: 'center', gap: '11px' }}>
+            <div className="achievement-item" key={i} style={{ flex: 1, padding: '20px 24px', borderRight: i < ACHIEVEMENTS.length - 1 ? `1px solid ${C.borderFaint}` : 'none', display: 'flex', alignItems: 'center', gap: '11px' }}>
               <div style={{ width: '4px', height: '4px', background: C.cyan, flexShrink: 0 }} />
               <div>
                 <div style={{ fontFamily: BODY, fontWeight: 500, fontSize: '11px', color: C.textMuted, lineHeight: 1.2 }}>{a.label}</div>
@@ -172,9 +173,9 @@ export default function Home() {
       </div>
 
       {/* ── 3. PRODUCTS ── */}
-      <section style={{ padding: '108px 0', background: C.bgAlt }}>
-        <div style={{ maxWidth: '1360px', margin: '0 auto', padding: '0 40px' }}>
-          <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '52px', paddingBottom: '28px', borderBottom: `1px solid ${C.border}` }}>
+      <section className="section-outer-pad" style={{ padding: '108px 0', background: C.bgAlt }}>
+        <div className="section-inner-pad" style={{ maxWidth: '1360px', margin: '0 auto', padding: '0 40px' }}>
+          <div className="section-header-row" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '52px', paddingBottom: '28px', borderBottom: `1px solid ${C.border}` }}>
             <div>
               <div style={{ fontFamily: MONO, fontSize: '9px', letterSpacing: '0.2em', color: C.cyan, textTransform: 'uppercase', marginBottom: '14px' }}>Our Solutions</div>
               <h2 style={{ fontFamily: DISPLAY, fontWeight: 300, fontStyle: 'italic', fontSize: 'clamp(36px, 4vw, 60px)', lineHeight: 1.05, color: C.textPrimary, margin: 0 }}>Products</h2>
@@ -184,7 +185,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: C.border }}>
+          <div className="products-grid-home" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: C.border }}>
             {PRODUCTS.map((p) => (
               <Link key={p.href} href={p.href} className="product-card">
                 <div style={{ marginBottom: '20px' }} dangerouslySetInnerHTML={{ __html: p.icon }} />
@@ -199,9 +200,9 @@ export default function Home() {
       </section>
 
       {/* ── 4. NEWS ── */}
-      <section style={{ padding: '108px 0', background: C.bg, borderTop: `1px solid ${C.borderFaint}` }}>
-        <div style={{ maxWidth: '1360px', margin: '0 auto', padding: '0 40px' }}>
-          <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '52px', paddingBottom: '28px', borderBottom: `1px solid ${C.border}` }}>
+      <section className="section-outer-pad" style={{ padding: '108px 0', background: C.bg, borderTop: `1px solid ${C.borderFaint}` }}>
+        <div className="section-inner-pad" style={{ maxWidth: '1360px', margin: '0 auto', padding: '0 40px' }}>
+          <div className="section-header-row" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '52px', paddingBottom: '28px', borderBottom: `1px solid ${C.border}` }}>
             <div>
               <div style={{ fontFamily: MONO, fontSize: '9px', letterSpacing: '0.2em', color: C.cyan, textTransform: 'uppercase', marginBottom: '14px' }}>Company News</div>
               <h2 style={{ fontFamily: DISPLAY, fontWeight: 300, fontStyle: 'italic', fontSize: 'clamp(36px, 4vw, 60px)', lineHeight: 1.05, color: C.textPrimary, margin: 0 }}>Announcements</h2>
@@ -212,7 +213,7 @@ export default function Home() {
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             {NEWS.map((n, i) => (
               <div key={i} className="news-row">
-                <span style={{ width: '108px', flexShrink: 0, fontFamily: MONO, fontSize: '10px', color: '#3E3C38', letterSpacing: '0.05em' }}>{n.date}</span>
+                <span className="news-date-col" style={{ width: '108px', flexShrink: 0, fontFamily: MONO, fontSize: '10px', color: '#3E3C38', letterSpacing: '0.05em' }}>{n.date}</span>
                 <div style={{ flex: 1, display: 'flex', justifyContent: 'space-between', gap: '24px', alignItems: 'center' }}>
                   <span style={{ fontFamily: BODY, fontWeight: 400, fontSize: '15px', color: '#9E9890', lineHeight: 1.55, letterSpacing: '0.01em' }}>{n.text}</span>
                   <div style={{ width: '4px', height: '4px', background: n.accent ? C.cyan : '#252320', flexShrink: 0 }} />
@@ -230,14 +231,14 @@ export default function Home() {
       </section>
 
       {/* ── 5. PULL QUOTE ── */}
-      <section style={{ position: 'relative', padding: '128px 0', background: C.bgWarm, borderTop: `1px solid ${C.borderFaint}`, borderBottom: `1px solid ${C.borderFaint}`, overflow: 'hidden' }}>
+      <section className="pull-quote-section" style={{ position: 'relative', padding: '128px 0', background: C.bgWarm, borderTop: `1px solid ${C.borderFaint}`, borderBottom: `1px solid ${C.borderFaint}`, overflow: 'hidden' }}>
         <div aria-hidden="true" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
-          <div style={{ position: 'absolute', top: '-60px', left: '28px', fontFamily: DISPLAY, fontWeight: 600, fontSize: '380px', lineHeight: 1, color: 'rgba(32,196,232,0.038)', userSelect: 'none', pointerEvents: 'none' }}>
+          <div className="pull-quote-deco" style={{ position: 'absolute', top: '-60px', left: '28px', fontFamily: DISPLAY, fontWeight: 600, fontSize: '380px', lineHeight: 1, color: 'rgba(32,196,232,0.038)', userSelect: 'none', pointerEvents: 'none' }}>
             &ldquo;
           </div>
           <div style={{ position: 'absolute', inset: 0, left: 'auto', width: '40%', background: 'radial-gradient(ellipse 80% 60% at 100% 50%, rgba(32,196,232,0.025) 0%, transparent 70%)' }} />
         </div>
-        <div style={{ maxWidth: '960px', margin: '0 auto', padding: '0 40px', position: 'relative' }}>
+        <div className="section-inner-pad" style={{ maxWidth: '960px', margin: '0 auto', padding: '0 40px', position: 'relative' }}>
           <blockquote style={{ fontFamily: DISPLAY, fontWeight: 300, fontStyle: 'italic', fontSize: 'clamp(22px, 3vw, 36px)', color: C.quoteText, lineHeight: 1.55, letterSpacing: '-0.01em', margin: 0 }}>
             &ldquo;The first and only company of the world to have digitized all the Constituency Maps of the National and Provincial Assemblies of Pakistan.&rdquo;
           </blockquote>

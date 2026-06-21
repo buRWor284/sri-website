@@ -11,7 +11,7 @@ const MORE_NEWS = [
 
 export default function News() {
   return (
-    <div>
+    <div className="page-section">
       <PageHero label="Press & Updates" title="News" />
 
       <section style={{ background: C.bg, padding: '72px 40px' }}>

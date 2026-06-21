@@ -21,6 +21,7 @@ export const ARCHIVE_BANNER_HEIGHT = BANNER_HEIGHT
 export function ArchiveBannerTop() {
   return (
     <div
+      className="archive-banner-top"
       style={{
         ...bannerBase,
         position: 'fixed',
@@ -30,7 +31,7 @@ export function ArchiveBannerTop() {
         zIndex: 200,
       }}
     >
-      <p style={{ margin: 0, fontFamily: DF, fontSize: '12px', fontStyle: 'italic', fontWeight: 400, letterSpacing: '0.02em', color: '#c4903a', lineHeight: 1 }}>
+      <p className="archive-banner-text" style={{ margin: 0, fontFamily: DF, fontSize: '12px', fontStyle: 'italic', fontWeight: 400, letterSpacing: '0.02em', color: '#c4903a', lineHeight: 1 }}>
         {TEXT}
       </p>
     </div>

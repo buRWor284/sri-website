@@ -60,7 +60,7 @@ const AWARDS = [
 
 export default function About() {
   return (
-    <div>
+    <div className="page-section">
       <PageHero label="Who We Are" title="About Silk Route Interactive" />
 
       <section style={{ background: C.bg, padding: '72px 40px' }}>

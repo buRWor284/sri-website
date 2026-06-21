@@ -34,7 +34,7 @@ export default function Services() {
   const [open, setOpen] = useState<string | null>(null)
 
   return (
-    <div>
+    <div className="page-section">
       <PageHero
         label="What We Do"
         title="Services"
@@ -42,7 +42,7 @@ export default function Services() {
       />
 
       <section style={{ background: C.bg, padding: '72px 40px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '64px' }}>
+        <div className="services-grid" style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '64px' }}>
           {/* Left column */}
           <div>
             <Lbl style={{ marginBottom: '14px', display: 'block' }}>Geospatial Revolution</Lbl>

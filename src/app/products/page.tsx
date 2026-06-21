@@ -41,7 +41,7 @@ const PRODUCTS = [
 
 export default function Products() {
   return (
-    <div>
+    <div className="page-section">
       <PageHero
         label="Our Solutions"
         title="Products"
@@ -76,7 +76,7 @@ export default function Products() {
           ))}
 
           {/* Constituency Maps */}
-          <div style={{ background: C.bgAlt, border: `1px solid ${C.border}`, padding: '36px', display: 'grid', gridTemplateColumns: '1fr auto', gap: '24px', alignItems: 'center' }}>
+          <div className="constituency-card-grid" style={{ background: C.bgAlt, border: `1px solid ${C.border}`, padding: '36px', display: 'grid', gridTemplateColumns: '1fr auto', gap: '24px', alignItems: 'center' }}>
             <div>
               <Lbl style={{ marginBottom: '10px', display: 'block' }}>Geospatial Data</Lbl>
               <h2 style={{ fontFamily: DF, fontWeight: 600, fontSize: '1.15rem', color: C.dark, margin: '0 0 10px' }}>Constituency Maps of Pakistan</h2>
