@@ -71,7 +71,7 @@ export default function Nav() {
         alignItems: 'center',
         justifyContent: 'space-between',
         position: 'sticky',
-        top: 0,
+        top: 40,
         zIndex: 1000,
         boxShadow: '0 2px 20px rgba(0,0,0,0.35)',
       }}
@@ -169,7 +169,7 @@ export default function Nav() {
         <div
           style={{
             position: 'fixed',
-            top: '64px',
+            top: '104px',
             left: 0,
             right: 0,
             background: C.nav,

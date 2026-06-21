@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { C, DF, BF } from '@/lib/tokens'
 import Lbl from './Lbl'
+import { ArchiveBannerFooter } from './ArchiveBanner'
 
 const linkStyle = {
   fontFamily: BF,
@@ -42,7 +43,9 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer style={{ background: C.nav, padding: '56px 40px 28px', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+    <footer style={{ background: C.nav, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+      <ArchiveBannerFooter />
+      <div style={{ padding: '56px 40px 28px' }}>
       <div
         style={{
           maxWidth: '1200px',
@@ -113,6 +116,7 @@ export default function Footer() {
         <p style={{ fontFamily: DF, fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.2)', textAlign: 'center', margin: 0 }}>
           © 2013 SILK ROUTE INTERACTIVE — CIE, NUST, ISLAMABAD, PAKISTAN
         </p>
+      </div>
       </div>
     </footer>
   )

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import { ArchiveBannerTop } from '@/components/ArchiveBanner'
 
 export const metadata: Metadata = {
   title: 'Silk Route Interactive — Company Archive',
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
+        <ArchiveBannerTop />
         <Nav />
         <main className="page-enter">{children}</main>
         <Footer />
